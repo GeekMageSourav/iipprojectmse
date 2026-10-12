@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitZone Gym</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <span class="logo">FitZone</span>
+      <div class="links">
+        <a href="#plans">Plans</a>
+        <a href="#why">Why Us</a>
+        <a href="#join">Join</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>Build Your Best Body</h1>
+      <p>Get fit. Stay strong. Join today!</p>
+      <a class="btn" href="#join">Become a Member</a>
+    </header>
+
+    <section id="why">
+      <h2>Why FitZone?</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Modern Equipment</h3>
+          <p>Machines and free weights for every workout.</p>
+        </div>
+        <div class="feature">
+          <h3>Expert Trainers</h3>
+          <p>Get a plan made just for your goals.</p>
+        </div>
+        <div class="feature">
+          <h3>Open Early to Late</h3>
+          <p>Train at 5 AM or 10 PM, whatever suits you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans">
+      <h2>Membership Plans</h2>
+      <div class="plans">
+        <div class="card">
+          <h3>Basic</h3>
+          <p class="price">Rs. 1000</p>
+          <p>1 Month</p>
+        </div>
+        <div class="card popular">
+          <h3>Standard</h3>
+          <p class="price">Rs. 2700</p>
+          <p>3 Months</p>
+        </div>
+        <div class="card">
+          <h3>Premium</h3>
+          <p class="price">Rs. 9000</p>
+          <p>12 Months</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <h2>Join Now</h2>
+      <form id="myForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" min="14" max="80" required />
+
+        <label for="plan">Choose a Plan</label>
+        <select id="plan">
+          <option value="Basic">Basic - Rs. 1000</option>
+          <option value="Standard">Standard - Rs. 2700</option>
+          <option value="Premium">Premium - Rs. 9000</option>
+        </select>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 FitZone Gym</p>
+    </footer>
+
+    <script>
+      const form = document.getElementById("myForm");
+
+      form.addEventListener("submit", function (ravan) {
+        ravan.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let plan = document.getElementById("plan").value;
+
+        var message = "Registration Successful";
+
+        document.getElementById("result").innerHTML = "<i>" + "<font color='hotpink'>" +
+          message +
+          "<br>" + "<hr>" +
+          "My name is : " +
+          name + "<hr>" +
+          "<br>" +
+          "My Age is : " +
+          age + "<hr>" +
+          "<br>" +
+          "My Plan is : " +
+          plan + "<hr>" +
+          "<br>";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #111;
+  color: #eee;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e63946;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+/* ---------- Hero (background image) ---------- */
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  /* dark overlay on top of the image so text stays readable */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("gym-bg.jpg");
+  background-color: #222; /* shows if the image is missing */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #c1121f;
+}
+
+/* ---------- Sections ---------- */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 30px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e63946;
+  margin: 10px auto 0;
+}
+
+/* ---------- Why us ---------- */
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.feature {
+  flex: 1;
+  min-width: 200px;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature h3 {
+  color: #e63946;
+  margin-top: 0;
+}
+
+/* ---------- Plan cards ---------- */
+.plans {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  border-color: #e63946;
+}
+
+.card.popular {
+  border-color: #e63946;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e63946;
+  margin: 10px 0;
+}
+
+/* ---------- Form ---------- */
+#join {
+  background: #1c1c1c;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: white;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c1121f;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #888;
+}
